@@ -1,0 +1,136 @@
+.vehicle-owner-container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.request-list {
+  flex: 1 1 400px;
+}
+
+.request-card {
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.request-card h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+.request-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.service-form {
+  flex: 1 1 400px;
+  background: #e6f2ff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.service-form h2 {
+  margin-bottom: 15px;
+}
+
+.service-form input,
+.service-form select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.service-form button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.service-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Container for the form and request cards side by side */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 40px;
+  flex-wrap: wrap; /* Makes it responsive on smaller screens */
+}
+
+/* Left side: Form */
+.left {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  margin-top: 800px; /* 👈 Moves the form down */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border-right: 1px solid #ccc;
+}
+
+/* Right side: Request cards */
+.right {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  margin-top: 80px; /* 👈 Moves the cards down */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Submit button */
+form button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Request Card Styles */
+.request-card {
+  background-color: #fff;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}

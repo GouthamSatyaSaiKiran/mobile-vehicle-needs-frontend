@@ -1,0 +1,85 @@
+/* Container to center the form */
+.signup-container {
+  max-width: 400px;
+  margin: 80px auto 0 auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Text */
+.signup-container h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.signup-container p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.input-group svg {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+/* Button Styling */
+button.signup-button {
+  width: 100%;
+  background-color: #3b82f6; /* Tailwind Blue-500 */
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.signup-button:hover {
+  background-color: #2563eb; /* Tailwind Blue-600 */
+}
+.input-group select {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: white;
+  appearance: none; /* removes default OS styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Optional: if you want a down-arrow indicator */
+.input-group select::after {
+  content: '▼';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 0.75rem;
+  color: #888;
+}

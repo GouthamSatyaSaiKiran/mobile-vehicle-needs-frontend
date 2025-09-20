@@ -1,0 +1,419 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: rgb(0, 0, 0);
+  line-height: 1.6;
+  padding-top: 80px; /* keep this for navbar spacing */
+  background: #e6f2ff;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Sticky Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4f46e5; 
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#img {
+  height: 80px;          /* slightly smaller than nav height for padding */
+  max-height: 100%;
+  display: block;        /* removes unwanted inline spacing */
+  object-fit: contain;   /* keeps logo ratio */
+  border-radius: 50%;
+}
+
+#txt {
+  width: 1000px;
+  color: white;
+}
+
+#t {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+nav a {
+  color: #ffffff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav button {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+nav button:hover {
+  background-color: #555;
+}
+
+/* Sections */
+section {
+  /*padding: 1.5rem 1rem;*/
+  /*max-width: 900px;*/
+  margin: auto;
+  text-align: center;
+}
+
+section h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+section p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* Specific spacing tweaks */
+#about {
+  padding-bottom: 0.1rem;
+  color: black;
+}
+
+#services {
+  padding-top: 0.1rem;
+}
+
+#services h1 {
+  margin-bottom: 0.1rem;
+}
+
+/* Card container */
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  padding: 0.5rem 1rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  width: 30%;
+  min-width: 280px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  height: 180px; /* Medium height for good balance */
+  object-fit: cover;
+}
+
+.card .container {
+  padding: 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h2 {
+  margin: auto;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.carousel-container {
+  margin: 20px auto;       
+  width: 100%;            
+  max-width: 1000px;      
+  height: 80vh;           
+  overflow: hidden;           
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+}
+
+.carousel-container img {
+  width: 100%;
+  height: 80vh;           
+  object-fit: cover;      
+}
+
+footer {           
+  width: 100%;         
+  text-align: center;   
+  background: #4f46e5; 
+  color: #fff;
+  padding: 2rem 1rem;  
+  margin-top: 1rem; 
+}
+
+footer a {
+  color: #fcd34d;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+footer h1 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Responsive cards */
+@media (max-width: 768px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+}
+
+#ab {
+  width: 1200px;
+}
+
+/* === Login Form Styling === */
+.login-container {
+  max-width: 400px;
+  margin: 120px auto;
+  padding: 2.5rem;
+  background: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+  transform: translateY(-2px);
+}
+
+.login-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login-form input,
+.login-form select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.login-form input:focus,
+.login-form select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.login-form button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+.login-message {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: rgb(15, 14, 14);
+}
+
+.back-link {
+  margin-top: 1.2rem;
+}
+
+.back-link a {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #e6f2ff;
+  color: #1e293b;
+  min-height: 100vh;
+  /*padding: 40px;*/
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: 1;
+}
+
+/* Form styling */
+form {
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(8, 80, 100, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+form label {
+  font-weight: 600;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+}
+
+form button[type="submit"] {
+  background: #0ea5e9;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background: #0284c7;
+}
+
+/* Request card styling */
+.request-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-left: 8px solid #0ea5e9;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 24px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.request-card h2 {
+  margin-top: 0;
+}
+
+.request-card h3 {
+  margin: 8px 0;
+  color: #0ea5e9;
+}
+
+.request-card p {
+  margin: 6px 0;
+}
+
+/* Make map responsive inside the card */
+.leaflet-container {
+  border-radius: 6px;
+  margin-top: 20px;
+  width: 100%;
+  height: 300px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+/* Optional: make layout responsive for mobile */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    color: #0284c7;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+}
